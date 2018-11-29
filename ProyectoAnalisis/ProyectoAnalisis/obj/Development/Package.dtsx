@@ -11,8 +11,9 @@
   DTS:LocaleID="5130"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{0E53058E-F256-4F31-BA99-7792BCBCF52C}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{4C273656-969A-4FE5-9515-7D3E2ACFFD4E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,10 +28,16 @@
           <DTS:FtpConnection
             DTS:ServerName="66.220.9.50"
             DTS:ServerUserName="analisisproyecto">
-            <DTS:Property
-              DTS:Name="ServerPassword"
-              Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADv2TMKyRqCc6BZmncXKXwjtKoYhl9GCux8AAolIyrU8AAAAAAOgAAAAAIAACAAAAB/WybKW9xfzVvOkgavBRdJwjDIcom/G1ZSN1HGJq5d/yAAAACxQNgyGgUhoJWO4WwY8V7Szk42GkRcqswLaGGtY81L10AAAAAPTiwfyv3YyIk4htC06+Tz/IE95jzAB4RtVSWeQ4jCriooHLU9BZ5RJq/ngGSTXDD7uPF5IMar3qdzxO/Q4GYy</DTS:Property>
+            <EncryptedData
+              Type="http://www.w3.org/2001/04/xmlenc#Element"
+              Salt="fgsTZ/0GOoU="
+              IV="pKVqu7jMo12Qvba8MxNVPg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              <EncryptionMethod
+                Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <CipherData>
+                <CipherValue>pKVqu7jMo12Qvba8MxNVPvCM7vcIg0UohrgX5K3eJl0t8H27mKidi+s5yO1V0utlYx5x/WUR/yojH0Qxqs8758DMV+yZ++dw22eIxgQY+sKjJ1cvdITQWQ+AU40j5Duw4QPZ3MtF0u7GIuPs9zId2X6S9qYPamav66WjxgHL2fxagrKNTO6ZAzejyGaUik9c</CipherValue>
+              </CipherData>
+            </EncryptedData>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>

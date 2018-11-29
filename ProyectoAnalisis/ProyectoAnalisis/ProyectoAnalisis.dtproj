@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithPassword" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{d89a3ae9-c5ba-4587-991d-74533b52c7d9}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">ProyectoAnalisis</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-H1DHP9O</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAACAAAAAAAQZgAAAAEAACAAAAASCjQ8OqURC2Fs0TDUwUVf8NUv5D5t9+xZ+2zQaXeDAAAAAAAOgAAAAAIAACAAAAD24cbxAuXa2Dp8xBPZA98/DZm8Pbnv6LuLp7f+HXEvMJAAAACnjYSo69xR9FwY8lOsiy2vn1rN3tQvcHEQgpjofNVQmv7xYW4g+I08+wnnHpJwdYfGu4ZFGd7t/W5+UlL88QqjI7zvjMZSINuxM6oyxesiAj2/ZqSQcHixsqfr6+J+8bggFxUOhnZLBihlnrUcYQoeI9t3tMPwK6nDzG6yz4hyN2Bi72BlzY3CrwK40yhjKxVAAAAAaCjKfPeScrQ85KTpqWQggWELJedC2fuP0pLKG+tFWRtD2IlaQIqDhbjzmpEixiYTkTLpRkBKKSACoAkcsLzLtg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="vwIBYGLx1Ag=" SSIS:IV="abDAEkZkYb04+ufadl7aKg==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">7kKNdP/04n/U5QeDVi9ahdyUyZIDZ9WeBbgNJolFIJDyDcsBFeBnTRpw6aPrjvvZjSaL+OQC+WblHRXY79QwoF+B+ur975VQJBbFMqi6AsDMwZEG8npESc9JMIxXKMJZ+Dt8GWnKsbn96Vw5Cbu7QwUbw2xuOC/zSs2G1kq/AqYuno1mTL8NNA9bysPSA74Z</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,14 +42,14 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0E53058E-F256-4F31-BA99-7792BCBCF52C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4C273656-969A-4FE5-9515-7D3E2ACFFD4E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.Administrador de conexiones FTP.ChunkSize">
