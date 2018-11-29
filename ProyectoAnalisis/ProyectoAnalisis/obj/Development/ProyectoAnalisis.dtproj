@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-H1DHP9O</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="tlZPIekHp/Y=" SSIS:IV="hXvfb5xyzOmr1U0J5FfAUQ==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">nqng2qcCdHAlew5MiEzFAkLQXgObyEDmpYJ6VmD7eXFYfog2+XLcF+KJG1F5ixSYhsj2+pK29wsDuzYnm+ueQiqwPojXFE9cIdOje97cRvTq2pa5PKYP9G1WH64EN9gr/9Rt38+nl0tozawEGXg3pzP6VJHp1ldHJqEu3d4l+YNnA31CGITe1FoqELAQUGg7</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1" SSIS:Salt="4Ud7vgjDN+g=" SSIS:IV="H3qpNKbJwM15OV9qSPuzSA==" SSIS:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc">9+7/9yqgASDeu6IQKcw7sCHkTjEtJL5gIdD1Qt1Hyyu/bCZb6m60XMbr2a3z5wK6kv0PsOWeXaR1ddMS4nSUg/hNJoyQk6uv3IwwVQYlcUrODNBIl3hmEJ7QoVhAvZDLHA1KnG5yldRvHKoDI0hU30XaSto8amf0xBxX25thOq8dpu2UJHaiAwZcA9y6YXiG</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,16 +42,44 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4C273656-969A-4FE5-9515-7D3E2ACFFD4E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{642DAC41-49DF-4036-85AD-553A3E6C2664}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">2</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="InputFolder">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{AA0E7C9C-400D-4630-90BE-CFEA38D7E980}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Proyecto\ImportacionArchivoSSIS\</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="OutputFolder">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{02F8D4B9-2460-4B4C-8BAC-4D3568714A72}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Proyecto\ImportacionArchivoSSIS\Uncompress files\</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.Administrador de conexiones FTP.ChunkSize">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -227,7 +255,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\RepositorioProyectoFinalAnalisis\ProyectoAnalisis\ExtraccionArchivosFTP</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Proyecto\ImportacionArchivoSSIS</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{4C273656-969A-4FE5-9515-7D3E2ACFFD4E}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{642DAC41-49DF-4036-85AD-553A3E6C2664}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,12 @@
             DTS:ServerUserName="analisisproyecto">
             <EncryptedData
               Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="f+CKQQjWTdQ="
-              IV="vPN1TFUN6S2EcdarKjrheg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              Salt="t2TF5RwJsZI="
+              IV="NGBOm9sfzfkwrRgje0xmnw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
               <EncryptionMethod
                 Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
               <CipherData>
-                <CipherValue>vPN1TFUN6S2EcdarKjrheuGXaF8jcLsMSgahLeW582sZs0ffG17kphGXiCIu+txQYOS0ZubKjg1Nk4CtXwxdM0eBqpeCB0RNoxojwXKRRE9Oyzgl0mUsY/jH4Zc2Pz8diKlBTZrH/eb98DgPGk+oN8vWF/4RoPAPep1Un1ZMO5kEp14o+cX+xIbhrAmkULQH</CipherValue>
+                <CipherValue>NGBOm9sfzfkwrRgje0xmn+AaC/Ltiiy4uLlq/bMFTyjkCG8eT6nljEQaseOGQDQTJRVfKIhXE9NHoLwcrB0YhwHketjQtN5FjTd8sUo5y7EBxQ6Oyaw2uZNm+HH2wX0/LGWrT+Nw5qCvCLiKk4ZooPjPNKYgHlbqj/8E6uyJFw7KmG6z/bHZj9SJTeZMitOr</CipherValue>
               </CipherData>
             </EncryptedData>
           </DTS:FtpConnection>
@@ -72,12 +72,70 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:FileUsageType="2"
-          DTS:ConnectionString="C:\RepositorioProyectoFinalAnalisis\ProyectoAnalisis\ExtraccionArchivosFTP" />
+          DTS:ConnectionString="C:\Proyecto\ImportacionArchivoSSIS" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{AA0E7C9C-400D-4630-90BE-CFEA38D7E980}"
+      DTS:ObjectName="InputFolder">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Proyecto\ImportacionArchivoSSIS\</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{02F8D4B9-2460-4B4C-8BAC-4D3568714A72}"
+      DTS:ObjectName="OutputFolder">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\Proyecto\ImportacionArchivoSSIS\Uncompress files\</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9B6F22E9-80EF-4C5C-9B44-6DCF04BFE658}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TarFiles">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{53F9EB58-AFCD-4C58-9090-8B6DA9D5FD9D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TarFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Descomprimir archivos"
+      DTS:CreationName="Microsoft.ExecuteProcess"
+      DTS:Description="Tarea Ejecutar proceso"
+      DTS:DTSID="{8326BD49-CD6B-4577-A115-5ED571A00BCC}"
+      DTS:ExecutableType="Microsoft.ExecuteProcess"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Descomprimir archivos"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecuteProcessData
+          Executable="C:\Program Files\WinRAR\WinRAR.exe"
+          Arguments="x C:\Proyecto\ImportacionArchivoSSIS\*.tar.gz"
+          WorkingDirectory="C:\Proyecto\ImportacionArchivoSSIS\Uncompress files" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Tarea FTP"
       DTS:CreationName="Microsoft.FtpTask"
@@ -98,22 +156,70 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DEE58CF1-B094-4D10-9B71-550C0866142E}"
+      DTS:From="Package\Tarea FTP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Tarea Descomprimir archivos" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="127,42"
+          Size="127.2,41.6"
           Id="Package\Tarea FTP"
-          TopLeft="379,142" />
+          TopLeft="317.285713234726,19.6470571075756" />
+        <NodeLayout
+          Size="215.2,41.6"
+          Id="Package\Tarea Descomprimir archivos"
+          TopLeft="296.00000504085,95.435295456091" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="380.885713234726,61.2470571075756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.7142918061236,34.1882383485154"
+              Start="0,0"
+              End="22.7142918061236,26.6882383485154">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.0941191742577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.0941191742577"
+                    Point2="0,17.0941191742577"
+                    Point3="4,17.0941191742577" />
+                  <mssgle:LineSegment
+                    End="18.7142918061236,17.0941191742577" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.7142918061236,17.0941191742577"
+                    Point2="22.7142918061236,17.0941191742577"
+                    Point3="22.7142918061236,21.0941191742577" />
+                  <mssgle:LineSegment
+                    End="22.7142918061236,26.6882383485154" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
