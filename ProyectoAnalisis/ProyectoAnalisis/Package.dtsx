@@ -11,8 +11,8 @@
   DTS:LocaleID="5130"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{62CFC810-DA6F-4929-ABA8-86DAFC5F8C38}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{0E53058E-F256-4F31-BA99-7792BCBCF52C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABXbZBnb+cevnWaIzYaq0nHhmhtmxszGGkDA5d8LgDZyQAAAAAOgAAAAAIAACAAAAAiEzp5ZKk/P5PkBc8otRcqVFNiTRAiuiVJQYibNoeXAyAAAAD2VaUf3+i+PikGpgmjJ9Ys7P7GDch/SgRWOmS+lxaakUAAAADuGHz0JkgUnjIMvT72sLgk3F2R7Hc6oV8kKx0OqtZb5p1qaAFIdC3/qZDQy2q2QvMfB8KKI4L2msNUxVf9u6SD</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwHkrkP/AS8KUzvcDLqtlivYpXmi+BQQNuzmAVokwTGAAAAAAOgAAAAAIAACAAAAArA12epmGGPG1vwT/waFXSE8an8ay6jqnEL/UnGCzn5SAAAAATEdwkVZVfpJt/AerbTXaRXqef+YtyRV0ebGlktiCB0UAAAAAbEOzN7ZUCzQ0qGIEWJ569t5NLNyzCGZBrjMb7IfSpCYfAEa72hxvDns9IAAblWxSzCPEmZCnWyfBrV2nFq17g</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -57,6 +57,17 @@
           DTS:ConnectionString="C:\RepositorioProyectoFinalAnalisis\ExtraccionArchivosFTP" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ExtraccionArchivosFTP 2]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{28B170E4-C575-4C28-8C8D-AB7DA7DCC98F}"
+      DTS:ObjectName="ExtraccionArchivosFTP 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\RepositorioProyectoFinalAnalisis\ProyectoAnalisis\ExtraccionArchivosFTP" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -74,7 +85,7 @@
         <FtpData
           ConnectionName="{5E4A9208-7BE3-4F56-B886-57EEF55459A5}"
           TaskOperationType="Receive"
-          TaskLocalPath="ExtraccionArchivosFTP 1"
+          TaskLocalPath="ExtraccionArchivosFTP 2"
           TaskRemotePath="/My Documents/*.*"
           TaskOverwriteDest="True" />
       </DTS:ObjectData>

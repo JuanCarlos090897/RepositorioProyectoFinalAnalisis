@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-H1DHP9O</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAACAAAAAAAQZgAAAAEAACAAAAC5CRubkxfn+KlExeuvi46Re3xHA8oSM0yLSasMTSNC/wAAAAAOgAAAAAIAACAAAABRVWa59jH8ajg7KJRZcx+WUAukZYLNrmU40cFigKoinZAAAAAQC78cJzFF1gyoDwXFmxERrkzZhzJ7NGjI5Dbr7CRsVkMcLgXYvmP8D/bmnedfhuZwlMbq86fy8dweaRdD+GJBz7EgulwQW79iCtiY8HhTygFXK9wKVrguz/RO/ct9wuByLlRGAHWD04qknZgLbhU4NpvBFXAyS+PoQtt/UOsIAXL7+QnTLJAsnYCbHJEGdEhAAAAAHKDx7/hg0Ed0ls0IcFdR/aNvx+ZWgw0c+8Qa6DbnAM4iMG1Kq6U/S5SjWl3a5LTj1XMZzoHp/ZsHn0yBDKc2QQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAACAAAAAAAQZgAAAAEAACAAAAASCjQ8OqURC2Fs0TDUwUVf8NUv5D5t9+xZ+2zQaXeDAAAAAAAOgAAAAAIAACAAAAD24cbxAuXa2Dp8xBPZA98/DZm8Pbnv6LuLp7f+HXEvMJAAAACnjYSo69xR9FwY8lOsiy2vn1rN3tQvcHEQgpjofNVQmv7xYW4g+I08+wnnHpJwdYfGu4ZFGd7t/W5+UlL88QqjI7zvjMZSINuxM6oyxesiAj2/ZqSQcHixsqfr6+J+8bggFxUOhnZLBihlnrUcYQoeI9t3tMPwK6nDzG6yz4hyN2Bi72BlzY3CrwK40yhjKxVAAAAAaCjKfPeScrQ85KTpqWQggWELJedC2fuP0pLKG+tFWRtD2IlaQIqDhbjzmpEixiYTkTLpRkBKKSACoAkcsLzLtg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{62CFC810-DA6F-4929-ABA8-86DAFC5F8C38}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0E53058E-F256-4F31-BA99-7792BCBCF52C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -216,6 +216,21 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.ExtraccionArchivosFTP 2.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\RepositorioProyectoFinalAnalisis\ProyectoAnalisis\ExtraccionArchivosFTP</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
@@ -235,7 +250,13 @@
         <ConnectionSecurityMappings />
         <DatabaseStorageLocations />
         <TargetServerVersion>SQLServer2017</TargetServerVersion>
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2018-11-29T00:08:15.865956Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>
