@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/28/2018 6:01:40 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-H1DHP9O"
+  DTS:CreatorName="DESKTOP-H1DHP9O\Personal"
+  DTS:DTSID="{0A32C708-C64F-460F-9C7A-E88EAD6FCA95}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="5130"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{62CFC810-DA6F-4929-ABA8-86DAFC5F8C38}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones FTP]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{5E4A9208-7BE3-4F56-B886-57EEF55459A5}"
+      DTS:ObjectName="Administrador de conexiones FTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="66.220.9.50:21">
+          <DTS:FtpConnection
+            DTS:ServerName="66.220.9.50"
+            DTS:ServerUserName="analisisproyecto">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGWtWZiaCFkWCKRNUc/chVAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADWF+BZ9MOPLhcCZrvuXnl2k2vr/PNwYz6xM8toafuGVAAAAAAOgAAAAAIAACAAAADAo1WIBH5VBtlugQcXNI3scSHKuqNBDlR6aD0vpXGsKCAAAADupWysRgVbxgBsjQuL4GdnCOC3qT5qmrMsYFzFtc6s3UAAAACIZUuhY04lSuscATZOGGtyZh2BVCL55COJ4e2tCcdeTyZvJs9OdEQ9FK4CjDBclfnJOzgtFWn4pJcslv8Ki1ry</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ExtraccionArchivosFTP]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{58A80032-7F1A-42CE-9DDD-C5C4732E116F}"
+      DTS:ObjectName="ExtraccionArchivosFTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\RepositorioProyectoFinalAnalisis\ExtraccionArchivosFTP" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ExtraccionArchivosFTP 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{CE0A6BBA-6728-4383-964C-D95BE974D70B}"
+      DTS:ObjectName="ExtraccionArchivosFTP 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\RepositorioProyectoFinalAnalisis\ExtraccionArchivosFTP" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea FTP"
+      DTS:CreationName="Microsoft.FtpTask"
+      DTS:Description="Tarea FTP"
+      DTS:DTSID="{73CA415D-E52B-4CAC-AFBF-7C08596D5811}"
+      DTS:ExecutableType="Microsoft.FtpTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea FTP"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FtpData
+          ConnectionName="{5E4A9208-7BE3-4F56-B886-57EEF55459A5}"
+          TaskOperationType="Receive"
+          TaskLocalPath="ExtraccionArchivosFTP 1"
+          TaskRemotePath="/My Documents/*.*"
+          TaskOverwriteDest="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Tarea FTP"
+          TopLeft="379,142" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
