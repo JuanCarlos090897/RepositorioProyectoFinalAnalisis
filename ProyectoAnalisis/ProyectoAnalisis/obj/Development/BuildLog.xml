@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ProyectoAnalisis</Name>
-    <LastWriteTime>2018-11-29T23:40:35.9434451Z</LastWriteTime>
+    <LastWriteTime>2018-11-30T00:20:24.5378457Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-    <Salt>TOvRqJKP</Salt>
-    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIccFo/d5bEWjLi/xD/JRXAAAAAACAAAAAAAQZgAAAAEAACAAAAB18L7N97SgiN3x0VFhlh/Mhz+hETUsmbLVwhEKQivgFwAAAAAOgAAAAAIAACAAAAAU0BwCXEVdGVC/iH7uQ6q45pXOByBUQoPT4Lln90rQAzAAAAC6oHY30S99L5lQixpNBGiSDO9Bh5H45JMtm5COhTWiXtaACMAeBubDNMGIMZKcLTFAAAAAje55nY5vAwYU5nwGCstBsTp86PFbuKE7s5VLCRXDFPbiummeUaCsTeBzYIJYRFrEqCbOfg7AAWqLwl/tNcX5cg==</LastKnownProtectedHashedPassword>
+    <Salt>pO5zHoW0</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIccFo/d5bEWjLi/xD/JRXAAAAAACAAAAAAAQZgAAAAEAACAAAAD4ebjCJmOdtxRYdnGwpGZZx5g9n9qZtH6ZKyf54FKzMgAAAAAOgAAAAAIAACAAAABZVjL9KhAGq3upi8gg2FH7uKA/kfCIic+qttugDzWs1TAAAAAGB9VvXW24scImrW1P4B8ZA0iu/+4eCQUHDh6KU2GWI2eYNwAboW1M6KeDTdlFt2xAAAAAvVt56FDkiSOnjj4Qld4wUn1ScnOR4hgHPePwb5SATW0t4ruA/rRWzfWmVtSpvw9mQdckE92ntCR+aUStjpmuAw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2018-11-30T00:00:07.9197932Z</LastWriteTime>
+      <LastWriteTime>2018-11-30T00:26:43.6766067Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
-      <Salt>BI4xotHi</Salt>
-      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIccFo/d5bEWjLi/xD/JRXAAAAAACAAAAAAAQZgAAAAEAACAAAACXAjncrRQ1L/ykNehZJZ+O1gdjo36lg1u4i0+Hv6ypAQAAAAAOgAAAAAIAACAAAACs63WDWeobhzGE4IlVihQmPQrwbuK1GPVDfTIqjIc0vzAAAAAUHPfTutwulAZJCTrI4JqLvnsCeQHHvhwoBFanjeRKO68Rfg1ECXrh7kLlMgn5E9hAAAAAaX3zdIJzVhw+bYCl6JBtRPqUiFAXTYFI3f4fqQraJKE97hlEZ+gWNVmS9q+v3s54n0YxzoJ4lSXV+7LvtrfPvA==</LastKnownProtectedHashedPassword>
+      <Salt>I0wLMEEf</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAIccFo/d5bEWjLi/xD/JRXAAAAAACAAAAAAAQZgAAAAEAACAAAABdZNg3Tr24TxF4goWzM5Mqo2VMYsBlKzK1LhiDF8ouewAAAAAOgAAAAAIAACAAAACaFV8LrtYsq2Dceo5IsgO/BTeJTCntW1uVxYcxNprfXDAAAABW5VFMKPmu1iaM1koY7c3s7ik8lGk67cxYii4dYzDU769a4z0NVS3QoCXwFmL4zMhAAAAAAXdhxrf+sLou4wkgHVngt1AcSLdDN4yhxQyyoPSIV4HikCPIYfBqMVg5T59ik5BR8ojHB2TxdtMdsfUllF2Rqg==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
