@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{68EEC3B5-90D0-48D6-A0B4-F85E9A48AB89}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{3C643B7A-D9B5-45DD-B72B-4446879DD865}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,12 @@
             DTS:ServerUserName="analisisproyecto">
             <EncryptedData
               Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="0fQgKF9ET9c="
-              IV="xwPAS8ovAZ6KD16tlztg8A==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              Salt="5NoQt/9mlAQ="
+              IV="OhW6JoFNED/YVtMqFcXIrQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
               <EncryptionMethod
                 Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
               <CipherData>
-                <CipherValue>xwPAS8ovAZ6KD16tlztg8NxOXohgmcEP2Kt53crcqG9ohMbTFu2P9pi8pa1YSP3cxQ9hB8tbEuQC4HoNOHBLAfSqGeqo3u+VcVM4KhWJ0eecSFBteaLfweOelpKWCpeVSK8u2O5WSI8jQG00imU66RZq2Dme+lrmSaziFi8D0I3k6UohfBXZuTig6XF4xCyt</CipherValue>
+                <CipherValue>OhW6JoFNED/YVtMqFcXIre6eQ5a1CYYig43i+ZQneIsHE6eyb29cMjcDvIeeb1zM0HmSnaEFMioRxb1Z57Su2PtpUJRqEZk8Vt7rr0uvBBRuD3z8RyBy8tZhAaa6D2P2gvl7mEyUqYV3KtbEMxu4xOYnnkntNQT4DgWJnNI8MeNrg/+dqJ0OEzEgmOV4HB6B</CipherValue>
               </CipherData>
             </EncryptedData>
           </DTS:FtpConnection>
@@ -344,6 +344,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="DESKTOP-A86I1HI\ANALISISMULTI.AdventureWorks2014"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Escribe entradas del registro sobre eventos en una base de datos de SQL Server"
+      DTS:DTSID="{BD3C77D0-6673-44C4-920C-A14082938AF8}"
+      DTS:ObjectName="RegistroArchivos">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:PackageParameters>
     <DTS:PackageParameter
       DTS:CreationName=""
@@ -396,7 +408,26 @@
         xml:space="preserve"></DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2" />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Borrar log antes del task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{F2068CCE-17F7-435F-B71A-0930EF45ABCF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Borrar log antes del task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A0C5C284-5B53-4E63-A41B-A7BEB5B0AA0F}"
+          SQLTask:SqlStatementSource="DELETE FROM [AdventureWorks2014].[dbo].[sysssislog]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Foreach Loop Container"
       DTS:CreationName="STOCK:FOREACHLOOP"
@@ -423,6 +454,35 @@
         </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="1">
+        <DTS:Property
+          DTS:DataType="8"
+          DTS:Name="EventFilter">1,13,OnInformation</DTS:Property>
+        <DTS:Property
+          DTS:EventName="OnInformation"
+          DTS:Name="ColumnFilter">
+          <DTS:Property
+            DTS:Name="Computer">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="Operator">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceName">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="SourceID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="ExecutionID">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="MessageText">-1</DTS:Property>
+          <DTS:Property
+            DTS:Name="DataBytes">-1</DTS:Property>
+        </DTS:Property>
+        <DTS:SelectedLogProviders>
+          <DTS:SelectedLogProvider
+            DTS:InstanceID="{BD3C77D0-6673-44C4-920C-A14082938AF8}" />
+        </DTS:SelectedLogProviders>
+      </DTS:LoggingOptions>
       <DTS:Executables>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\Tarea exportar datos OrderDetail"
@@ -434,6 +494,8 @@
           DTS:ObjectName="Tarea exportar datos OrderDetail"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
+          <DTS:LoggingOptions
+            DTS:FilterKind="0" />
           <DTS:ObjectData>
             <pipeline
               version="1">
@@ -1190,6 +1252,9 @@
       DTS:ObjectName="Tarea Descomprimir archivos"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
       <DTS:ObjectData>
         <ExecuteProcessData
           Executable="C:\Program Files\WinRAR\WinRAR.exe"
@@ -1207,6 +1272,9 @@
       DTS:ObjectName="Tarea FTP"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0"
+        DTS:LoggingMode="2" />
       <DTS:ObjectData>
         <FtpData
           ConnectionName="{5E4A9208-7BE3-4F56-B886-57EEF55459A5}"
@@ -1229,10 +1297,18 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{06E956F5-C20C-418C-B02E-D8A763187A51}"
+      DTS:DTSID="{6A63027E-443B-4C14-852A-BC8F7B4449D2}"
       DTS:From="Package\Tarea Descomprimir archivos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Borrar log antes del task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{F4D72B4E-8372-45DA-96FF-942A057B7F3A}"
+      DTS:From="Package\Borrar log antes del task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
       DTS:To="Package\Foreach Loop Container" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -1248,13 +1324,24 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Tarea FTP"
-          TopLeft="317.285713234726,19.6470571075756" />
+          Size="233.6,41.6"
+          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail"
+          TopLeft="30.2571484405169,16.8000030994417" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="297.6,130.4"
+          Size="297.6,173.6"
+          Id="Package\Foreach Loop Container"
+          TopLeft="297.85714792962,175.88235540786" />
         <NodeLayout
           Size="215.2,41.6"
           Id="Package\Tarea Descomprimir archivos"
           TopLeft="296.00000504085,95.435295456091" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Tarea FTP"
+          TopLeft="317.285713234726,19.6470571075756" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="380.885713234726,61.2470571075756">
@@ -1290,42 +1377,69 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="233.6,41.6"
-          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail"
-          TopLeft="30.2571484405169,16.8000030994417" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="297.6,130.4"
-          Size="297.6,173.6"
-          Id="Package\Foreach Loop Container"
-          TopLeft="297.85714792962,175.88235540786" />
+          Size="169.6,41.6"
+          Id="Package\Borrar log antes del task"
+          TopLeft="579.047628908741,104.000001458561" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="403.60000504085,137.035295456091">
+          TopLeft="511.20000504085,116.235295456091">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="43.05714288877,38.847059951769"
+              EndConnector="67.8476238678915,8.56470600246975"
               Start="0,0"
-              End="43.05714288877,31.347059951769">
+              End="60.3476238678915,8.56470600246975">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.4235299758845" />
+                    End="29.9238119339458,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,15.4235299758845"
-                    Point2="0,19.4235299758845"
-                    Point3="4,19.4235299758845" />
+                    Point1="29.9238119339458,0"
+                    Point2="33.9238119339458,0"
+                    Point3="33.9238119339458,4" />
                   <mssgle:LineSegment
-                    End="39.05714288877,19.4235299758845" />
+                    End="33.9238119339458,4.56470600246975" />
                   <mssgle:CubicBezierSegment
-                    Point1="39.05714288877,19.4235299758845"
-                    Point2="43.05714288877,19.4235299758845"
-                    Point3="43.05714288877,23.4235299758845" />
+                    Point1="33.9238119339458,4.56470600246975"
+                    Point2="33.9238119339458,8.56470600246975"
+                    Point3="37.9238119339458,8.56470600246975" />
                   <mssgle:LineSegment
-                    End="43.05714288877,31.347059951769" />
+                    End="60.3476238678915,8.56470600246975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="663.847628908741,145.600001458561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-217.190480979121,30.2823539492992"
+              Start="0,0"
+              End="-217.190480979121,22.7823539492992">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.1411769746496" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.1411769746496"
+                    Point2="0,15.1411769746496"
+                    Point3="-4,15.1411769746496" />
+                  <mssgle:LineSegment
+                    End="-213.190480979121,15.1411769746496" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-213.190480979121,15.1411769746496"
+                    Point2="-217.190480979121,15.1411769746496"
+                    Point3="-217.190480979121,19.1411769746496" />
+                  <mssgle:LineSegment
+                    End="-217.190480979121,22.7823539492992" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1341,7 +1455,7 @@
     design-time-name="Package\Foreach Loop Container\Tarea exportar datos OrderDetail">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190.4,41.6"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Origen de archivo plano"
@@ -1350,6 +1464,10 @@
           Size="174.4,41.6"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Conversión de datos"
           TopLeft="642.4,79.2" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Destino de OLE DB"
+          TopLeft="468.8,163.2" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail.Paths[Salida de origen de archivo plano]"
           TopLeft="628,55.2">
@@ -1375,13 +1493,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,41.6"
-          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Destino de OLE DB"
-          TopLeft="468.8,163.2" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail.Paths[Salida de conversión de datos]"
           TopLeft="729.6,120.8">
@@ -1413,7 +1529,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
