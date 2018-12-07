@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{5262A276-AFEB-410D-AE96-658C2165B691}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{9243D61D-2607-492D-9EAB-568755CFCCAB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,37 @@
             DTS:ServerUserName="analisisproyecto">
             <EncryptedData
               Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="BYQ5jg6vKyU="
-              IV="C1pEBPjk+fAjsxZwEDdHfw==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              Salt="s3AP6z2PwoQ="
+              IV="CuNBrf9Z3PlP0mF3BA17LQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
               <EncryptionMethod
                 Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
               <CipherData>
-                <CipherValue>C1pEBPjk+fAjsxZwEDdHf30areb1/YgNHIjFYe/DPZ3T/2h2IGIpPdVXsqE9G9AybKCs4DWUQC4el0vhaV4lJPRapDUbqeBwjqm4nrXspt72ZgJ7Yug9rdYLrUbmif+6A/jwz27YNtO3ou53UxnzwjQICnDJy2jCMJ8s7Y4ITOjuG8iIJL4b+GNAc7Vvi/Ui</CipherValue>
+                <CipherValue>CuNBrf9Z3PlP0mF3BA17LUl1dUl1jkQpxg8WTieYsMwH4ha1zjTJDND0IhqCDvyU9/+DldYv3hT0kr54C8yeRqqMDI8OEOtsQJJV6F/9buzVsYyRBsCuAp76I4npgEQ8Ddy8NXhlvxIFqW4jQNWMr4aV+sdhp7N8+jOxqqFEYhqiMvGH6TnaZ1B1tvNbyA/k</CipherValue>
+              </CipherData>
+            </EncryptedData>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones FTP 1]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{85A00EFC-364F-4D15-857C-75FE472A211C}"
+      DTS:ObjectName="Administrador de conexiones FTP 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="66.220.9.50:21">
+          <DTS:FtpConnection
+            DTS:ServerName="66.220.9.50"
+            DTS:ServerUserName="analisisproyecto">
+            <EncryptedData
+              Type="http://www.w3.org/2001/04/xmlenc#Element"
+              Salt="k5r76M/8oa8="
+              IV="sIWFiEeuxAJTxlhhPzhXbA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              <EncryptionMethod
+                Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
+              <CipherData>
+                <CipherValue>sIWFiEeuxAJTxlhhPzhXbC4W0SSpULbOeBwq639warvtupJCuZ6RmedT12OxxevbVAXiEnndtu/re6p+Gn73Dsm58lL0fSZXwaWp373sTCNVSg+vyM46/FRGEi8/Kk5IrcUh+yqaMbnORzbx4D0LxPyKh5ml2hlcgrkG6RlRmB26tSl6urujjQ6CcM0zfIzH</CipherValue>
               </CipherData>
             </EncryptedData>
           </DTS:FtpConnection>
@@ -50,6 +75,36 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-A86I1HI\ANALISISMULTI;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{87954563-7D66-429C-8F02-6D67E02D56C6}"
+      DTS:ObjectName="DESKTOP-H1DHP9O.AdventureWorks2014">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-H1DHP9O;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{43241163-F81B-4280-B290-D88163BCFBE2}"
+      DTS:ObjectName="DESKTOP-H1DHP9O.AdventureWorks2014 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-H1DHP9O;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-H1DHP9O.Testing]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6DAF2FEA-F65D-4BA4-9633-8094AF425F1C}"
+      DTS:ObjectName="DESKTOP-H1DHP9O.Testing">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-H1DHP9O;Initial Catalog=Testing;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -354,6 +409,28 @@
           DTS:ConnectionString="C:\Proyecto\ImportacionArchivoSSIS" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ImportacionArchivoSSIS 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{84F93FC1-BB5B-4462-9AF9-21261C8760A6}"
+      DTS:ObjectName="ImportacionArchivoSSIS 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Proyecto\ImportacionArchivoSSIS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ImportacionesArchivoSSIS]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{299DAC29-4FCD-4032-AF94-5DB08A450963}"
+      DTS:ObjectName="ImportacionesArchivoSSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\Proyecto\ImportacionesArchivoSSIS" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:LogProviders>
     <DTS:LogProvider
@@ -400,6 +477,16 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{A70DA6E8-894C-40C8-A797-F4EE6F1DB13E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NombredelFTP">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{9B6F22E9-80EF-4C5C-9B44-6DCF04BFE658}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
@@ -435,7 +522,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A0C5C284-5B53-4E63-A41B-A7BEB5B0AA0F}"
+          SQLTask:Connection="{43241163-F81B-4280-B290-D88163BCFBE2}"
           SQLTask:SqlStatementSource="DELETE FROM [AdventureWorks2014].[dbo].[sysssislog]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -825,8 +912,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Destino de OLE DB.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[DESKTOP-A86I1HI\ANALISISMULTI.AdventureWorks2014]"
-                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-A86I1HI\ANALISISMULTI.AdventureWorks2014]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014]"
                       description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                       name="OleDbConnection" />
                   </connections>
@@ -1330,9 +1417,9 @@
         DTS:LoggingMode="2" />
       <DTS:ObjectData>
         <FtpData
-          ConnectionName="{5E4A9208-7BE3-4F56-B886-57EEF55459A5}"
+          ConnectionName="{85A00EFC-364F-4D15-857C-75FE472A211C}"
           TaskOperationType="Receive"
-          TaskLocalPath="ExtraccionArchivosFTP 2"
+          TaskLocalPath="ImportacionArchivoSSIS 1"
           TaskRemotePath="/My Documents/*.*"
           TaskOverwriteDest="True" />
       </DTS:ObjectData>
@@ -1373,31 +1460,35 @@
       DTS:To="Package\Borrar log antes del task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
-          Size="233.6,41.6"
-          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail"
-          TopLeft="30.2571484405169,16.8000030994417" />
+          Size="170,42"
+          Id="Package\Borrar log antes del task"
+          TopLeft="309.761910037118,429.509808669041" />
         <NodeLayout
-          Size="236,41.6"
+          Size="236,42"
           Id="Package\Foreach Loop Container\Tarea borrar archivos procesados"
           TopLeft="50.0190535389648,97.662749859811" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail"
+          TopLeft="30.2571484405169,16.8000030994417" />
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
           TopLeft="147.057148440517,58.4000030994417">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="20.9619050984479,39.2627467603693"
               Start="0,0"
               End="20.9619050984479,31.7627467603693">
@@ -1429,44 +1520,48 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="387.2,196"
-          Size="387.2,239.2"
+          PanelSize="387,196"
+          Size="387,239"
           Id="Package\Foreach Loop Container"
-          TopLeft="210.714289302729,426.098044392147" />
+          TopLeft="210.714289302729,517.098044392147" />
         <NodeLayout
-          Size="215.2,41.6"
+          Size="242,42"
+          Id="Package\Tarea borrar archivos comprimidos"
+          TopLeft="316.904767301618,268.156865229656" />
+        <NodeLayout
+          Size="215,42"
           Id="Package\Tarea Descomprimir archivos"
-          TopLeft="296.00000504085,95.435295456091" />
+          TopLeft="296.00000504085,186.435295456091" />
         <NodeLayout
-          Size="127.2,41.6"
+          Size="127,42"
           Id="Package\Tarea FTP"
-          TopLeft="317.285713234726,19.6470571075756" />
+          TopLeft="317.285713234726,110.647057107576" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="380.885713234726,61.2470571075756">
+          TopLeft="380.785713234726,152.647057107576">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="22.7142918061236,34.1882383485154"
+              StartConnector="{x:Null}"
+              EndConnector="22.714291806124,33.7882383485154"
               Start="0,0"
-              End="22.7142918061236,26.6882383485154">
+              End="22.714291806124,26.2882383485154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.0941191742577" />
+                    End="0,12.8941191742577" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.0941191742577"
-                    Point2="0,17.0941191742577"
-                    Point3="4,17.0941191742577" />
+                    Point1="0,12.8941191742577"
+                    Point2="0,16.8941191742577"
+                    Point3="4,16.8941191742577" />
                   <mssgle:LineSegment
-                    End="18.7142918061236,17.0941191742577" />
+                    End="18.714291806124,16.8941191742577" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.7142918061236,17.0941191742577"
-                    Point2="22.7142918061236,17.0941191742577"
-                    Point3="22.7142918061236,21.0941191742577" />
+                    Point1="18.714291806124,16.8941191742577"
+                    Point2="22.714291806124,16.8941191742577"
+                    Point3="22.714291806124,20.8941191742577" />
                   <mssgle:LineSegment
-                    End="22.7142918061236,26.6882383485154" />
+                    End="22.714291806124,26.2882383485154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1475,54 +1570,12 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\Borrar log antes del task"
-          TopLeft="309.761910037118,338.509808669041" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="394.561910037118,380.109808669041">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.75237926561039,45.9882357231059"
-              Start="0,0"
-              End="9.75237926561039,38.4882357231059">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.994117861553" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.994117861553"
-                    Point2="0,22.994117861553"
-                    Point3="4,22.994117861553" />
-                  <mssgle:LineSegment
-                    End="5.75237926561039,22.994117861553" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.75237926561039,22.994117861553"
-                    Point2="9.75237926561039,22.994117861553"
-                    Point3="9.75237926561039,26.994117861553" />
-                  <mssgle:LineSegment
-                    End="9.75237926561039,38.4882357231059" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="242.4,41.6"
-          Id="Package\Tarea borrar archivos comprimidos"
-          TopLeft="316.904767301618,177.156865229656" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="403.60000504085,137.035295456091">
+          TopLeft="403.60000504085,228.035295456091">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="34.504762260768,40.1215697735652"
               Start="0,0"
               End="34.504762260768,32.6215697735652">
@@ -1552,11 +1605,45 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="438.104767301618,218.756865229656">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="394.761910037118,471.509808669041">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
+              EndConnector="9.45237926561094,45.588235723106"
+              Start="0,0"
+              End="9.45237926561094,38.088235723106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.794117861553" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.794117861553"
+                    Point2="0,22.794117861553"
+                    Point3="4,22.794117861553" />
+                  <mssgle:LineSegment
+                    End="5.45237926561094,22.794117861553" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.45237926561094,22.794117861553"
+                    Point2="9.45237926561094,22.794117861553"
+                    Point3="9.45237926561094,26.794117861553" />
+                  <mssgle:LineSegment
+                    End="9.45237926561094,38.088235723106" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="438.104767301618,309.756865229656">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
               EndConnector="-43.5428572644994,119.752943439385"
               Start="0,0"
               End="-43.5428572644994,112.252943439385">
@@ -1588,9 +1675,9 @@
         <AnnotationLayout
           Text="2. Descomprime los archivos en C:\Proyecto\Uncompress files"
           ParentId="Package"
-          Size="329.6,60"
+          Size="330,37"
           Id="3c97a1cf-b9c5-43d2-a7e8-148a6f6c6629"
-          TopLeft="523.571437487797,89.4705894900853">
+          TopLeft="523.571437487797,180.470589490085">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1603,9 +1690,9 @@
         <AnnotationLayout
           Text="1.Trae los archivos del FTP site a C:\Proyecto\ImportacionArchivoSSIS"
           ParentId="Package"
-          Size="370.4,60"
+          Size="370,37"
           Id="14c07ca5-1b49-4e29-b7ac-ce44f3c94b59"
-          TopLeft="526.428580393597,24.4705885784849">
+          TopLeft="526.428580393597,115.470588578485">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1618,9 +1705,9 @@
         <AnnotationLayout
           Text="3. Borra los archivos comprimidos tar.gz"
           ParentId="Package"
-          Size="224,60"
+          Size="224,37"
           Id="15a1a93b-3879-4e85-a3ef-39d8ef623164"
-          TopLeft="565.714295348343,167.470590584006">
+          TopLeft="565.714295348343,258.470590584006">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1633,9 +1720,9 @@
         <AnnotationLayout
           Text="4.Borra la bitacora antes de correr el task"
           ParentId="Package"
-          Size="230.4,60"
+          Size="230,37"
           Id="de32ed87-5242-4ea8-966a-4f70b59a07ef"
-          TopLeft="497.14286560915,334.941181168012">
+          TopLeft="497.14286560915,425.941181168012">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1646,11 +1733,11 @@
           </AnnotationLayout.FontInfo>
         </AnnotationLayout>
         <AnnotationLayout
-          Text="5. Haciendo uso del foreach loop lee cada archivo &#xD;&#xA;en C:\Proyecto\Uncompress Files, lo lee y agrega la informacion &#xD;&#xA;a la tabla dbo.Sales.SalesOrderDetailProyecto en la base de datos&#xD;&#xA;AdventureWorks2014"
+          Text="5. Haciendo uso del foreach loop lee cada archivo &#xA;en C:\Proyecto\Uncompress Files, lo lee y agrega la informacion &#xA;a la tabla dbo.Sales.SalesOrderDetailProyecto en la base de datos&#xA;AdventureWorks2014"
           ParentId="Package"
-          Size="347.2,76.8"
+          Size="348,77"
           Id="b245cb7b-d8c5-4488-a1f8-53529acc37c3"
-          TopLeft="614.285724746938,468.882357048741">
+          TopLeft="614.285724746938,559.882357048741">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1663,9 +1750,9 @@
         <AnnotationLayout
           Text="6. Borra todos los archivos que fueron leidos y procesados"
           ParentId="Package"
-          Size="312,60"
+          Size="312,37"
           Id="643e19c2-adb6-41aa-bdf1-42e42b142229"
-          TopLeft="612.142867567588,563.70588779037">
+          TopLeft="612.142867567588,654.70588779037">
           <AnnotationLayout.FontInfo>
             <mssge:FontInfo
               Color="#FFF1F1F1">
@@ -1684,15 +1771,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="190.4,41.6"
+          Size="190,42"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Origen de archivo plano"
           TopLeft="437.6,34.4" />
         <NodeLayout
-          Size="174.4,41.6"
+          Size="174,42"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Conversión de datos"
           TopLeft="642.4,79.2" />
         <NodeLayout
-          Size="168,41.6"
+          Size="168,42"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Destino de OLE DB"
           TopLeft="468.8,163.2" />
         <EdgeLayout
