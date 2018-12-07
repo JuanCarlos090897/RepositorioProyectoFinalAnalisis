@@ -12,8 +12,8 @@
   DTS:ObjectName="Package"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{9243D61D-2607-492D-9EAB-568755CFCCAB}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{8AF5C541-3F6C-4B9F-80D8-FCFC47DB635A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,12 +30,12 @@
             DTS:ServerUserName="analisisproyecto">
             <EncryptedData
               Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="s3AP6z2PwoQ="
-              IV="CuNBrf9Z3PlP0mF3BA17LQ==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              Salt="6Odzyudj7Kk="
+              IV="huLYSKAIEOTa5g76J54KLA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
               <EncryptionMethod
                 Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
               <CipherData>
-                <CipherValue>CuNBrf9Z3PlP0mF3BA17LUl1dUl1jkQpxg8WTieYsMwH4ha1zjTJDND0IhqCDvyU9/+DldYv3hT0kr54C8yeRqqMDI8OEOtsQJJV6F/9buzVsYyRBsCuAp76I4npgEQ8Ddy8NXhlvxIFqW4jQNWMr4aV+sdhp7N8+jOxqqFEYhqiMvGH6TnaZ1B1tvNbyA/k</CipherValue>
+                <CipherValue>huLYSKAIEOTa5g76J54KLBe+fOqIngnSoJ2fcNzli+WzpIkjpetAc3dCS7rZaffJ/OEfhkFpP1ueL7nS2zczWhHvh/114c6J6lZzLIAVlvpPhlvDdycZm5JOOHGt8sXbI/JEq44buAFUF884qBwLVUArc+MiKSVSqN9uizr/CvpdI3g9uCK9iDyRftCvrHXy</CipherValue>
               </CipherData>
             </EncryptedData>
           </DTS:FtpConnection>
@@ -55,12 +55,12 @@
             DTS:ServerUserName="analisisproyecto">
             <EncryptedData
               Type="http://www.w3.org/2001/04/xmlenc#Element"
-              Salt="k5r76M/8oa8="
-              IV="sIWFiEeuxAJTxlhhPzhXbA==" xmlns="http://www.w3.org/2001/04/xmlenc#">
+              Salt="8Fr7uBCyHL4="
+              IV="qLvRDBSkQKcQrD1kKKtdkg==" xmlns="http://www.w3.org/2001/04/xmlenc#">
               <EncryptionMethod
                 Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" />
               <CipherData>
-                <CipherValue>sIWFiEeuxAJTxlhhPzhXbC4W0SSpULbOeBwq639warvtupJCuZ6RmedT12OxxevbVAXiEnndtu/re6p+Gn73Dsm58lL0fSZXwaWp373sTCNVSg+vyM46/FRGEi8/Kk5IrcUh+yqaMbnORzbx4D0LxPyKh5ml2hlcgrkG6RlRmB26tSl6urujjQ6CcM0zfIzH</CipherValue>
+                <CipherValue>qLvRDBSkQKcQrD1kKKtdkhxuxoyQe/XzPUhAXxxEE5bR9YkzQInhgCQZmvrPRIzAu9RN85XqKziTSQX3Vnl0J+QnnCCfRB1LAFKUmy0TFw7IdKtjuBszG3SX/UO9wSj1Wmz4/nnpPePZuoWNu9LMrjzCnOttMYk87RktG22dufhNWlgXJUPHMlSHwbppFms9</CipherValue>
               </CipherData>
             </EncryptedData>
           </DTS:FtpConnection>
@@ -92,6 +92,16 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{43241163-F81B-4280-B290-D88163BCFBE2}"
       DTS:ObjectName="DESKTOP-H1DHP9O.AdventureWorks2014 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-H1DHP9O;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E6151E8D-7BD3-4C4D-900E-8F874783EA7F}"
+      DTS:ObjectName="DESKTOP-H1DHP9O.AdventureWorks2014 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-H1DHP9O;Initial Catalog=AdventureWorks2014;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
@@ -501,6 +511,56 @@
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="TarFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{55706791-B275-4C8E-BD4A-05160BEE351E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="V_Contrasena_FTP">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7AC6565E-A25B-4144-B79C-93BFF1597C0F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="V_LocalPath_FTP">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{333735EA-6C51-4688-8AC8-FD8CC1810207}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="V_NombreIP_FTP">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8CE33240-8ED1-4417-A60E-0C83F68C764A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="V_RemotePath_FTP">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F5777654-A5C2-4426-A07B-D360D53323A9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="V_Usuario_FTP">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
@@ -1403,6 +1463,323 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{B3C6067E-C041-4F1D-9869-7B396CB395A2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Componente de script"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;11"
+              description="Incluye y ejecuta código de scripts personalizados. Por ejemplo, se usa para aplicar una regla de negocios que limita el intervalo de valores válidos de una columna de ingresos o para sumar los valores de dos columnas y calcular el promedio de la suma."
+              name="Componente de script"
+              version="11">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Almacena el código fuente del componente"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Almacena la representación binaria del componente"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del proyecto de Microsoft Visual Studio Tools para Aplicaciones. Los nombres de proyecto deben ser únicos en el paquete."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_cd89066438254703a0244800a02dc4f9</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el lenguaje de programación que utiliza el script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una lista separada por comas de variables de solo lectura."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una lista separada por comas de variables de lectura/escritura."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Lista de puntos de interrupción presentes en el script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Suma de comprobación para comparar los metadatos del componente con los códigos compilados."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]"
+                  hasSideEffects="true"
+                  name="Entrada 0">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Componente de script.Outputs[Salida 0]"
+                  name="Salida 0"
+                  synchronousInputId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Origen de OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen de OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Parametros]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-H1DHP9O.AdventureWorks2014 2]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[NombreDelServidorFTP]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[NombreDelServidorFTP]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[NombreDelServidorFTP]"
+                      name="NombreDelServidorFTP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[PuertoDelServidor]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[PuertoDelServidor]"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[PuertoDelServidor]"
+                      name="PuertoDelServidor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[NombreDelUsuraio]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[NombreDelUsuraio]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[NombreDelUsuraio]"
+                      name="NombreDelUsuraio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Contrasena]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Contrasena]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Contrasena]"
+                      name="Contrasena"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LocalPath]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[LocalPath]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[LocalPath]"
+                      name="LocalPath"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[RemotePath]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[RemotePath]"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[RemotePath]"
+                      name="RemotePath"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[NombreDelServidorFTP]"
+                      dataType="wstr"
+                      length="50"
+                      name="NombreDelServidorFTP" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[PuertoDelServidor]"
+                      dataType="i4"
+                      name="PuertoDelServidor" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[NombreDelUsuraio]"
+                      dataType="wstr"
+                      length="50"
+                      name="NombreDelUsuraio" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[Contrasena]"
+                      dataType="wstr"
+                      length="50"
+                      name="Contrasena" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[LocalPath]"
+                      dataType="wstr"
+                      length="50"
+                      name="LocalPath" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[RemotePath]"
+                      dataType="wstr"
+                      length="50"
+                      name="RemotePath" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[NombreDelServidorFTP]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[NombreDelServidorFTP]"
+                      name="NombreDelServidorFTP" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[PuertoDelServidor]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[PuertoDelServidor]"
+                      name="PuertoDelServidor" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[NombreDelUsuraio]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[NombreDelUsuraio]"
+                      name="NombreDelUsuraio" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Contrasena]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[Contrasena]"
+                      name="Contrasena" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[LocalPath]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[LocalPath]"
+                      name="LocalPath" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[RemotePath]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[RemotePath]"
+                      name="RemotePath" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de datos\Componente de script.Inputs[Entrada 0]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Tarea FTP"
       DTS:CreationName="Microsoft.FtpTask"
       DTS:Description="Tarea FTP"
@@ -1458,6 +1835,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\Borrar log antes del task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{93576CF7-939B-43A9-9095-7B1A61F5B53F}"
+      DTS:From="Package\Tarea Flujo de datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea FTP" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -1470,7 +1855,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
         <NodeLayout
           Size="170,42"
           Id="Package\Borrar log antes del task"
@@ -1488,7 +1873,7 @@
           TopLeft="147.057148440517,58.4000030994417">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="20.9619050984479,39.2627467603693"
               Start="0,0"
               End="20.9619050984479,31.7627467603693">
@@ -1541,7 +1926,7 @@
           TopLeft="380.785713234726,152.647057107576">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="22.714291806124,33.7882383485154"
               Start="0,0"
               End="22.714291806124,26.2882383485154">
@@ -1575,7 +1960,7 @@
           TopLeft="403.60000504085,228.035295456091">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="34.504762260768,40.1215697735652"
               Start="0,0"
               End="34.504762260768,32.6215697735652">
@@ -1609,7 +1994,7 @@
           TopLeft="394.761910037118,471.509808669041">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="9.45237926561094,45.588235723106"
               Start="0,0"
               End="9.45237926561094,38.088235723106">
@@ -1643,7 +2028,7 @@
           TopLeft="438.104767301618,309.756865229656">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
+              StartConnector="{assembly:Null}"
               EndConnector="-43.5428572644994,119.752943439385"
               Start="0,0"
               End="-43.5428572644994,112.252943439385">
@@ -1762,6 +2147,59 @@
             </mssge:FontInfo>
           </AnnotationLayout.FontInfo>
         </AnnotationLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="282,28" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="370,70">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.785713234726,40.647057107576"
+              Start="0,0"
+              End="10.785713234726,33.147057107576">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.323528553788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.323528553788"
+                    Point2="0,20.323528553788"
+                    Point3="4,20.323528553788" />
+                  <mssgle:LineSegment
+                    End="6.78571323472602,20.323528553788" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.78571323472602,20.323528553788"
+                    Point2="10.785713234726,20.323528553788"
+                    Point3="10.785713234726,24.323528553788" />
+                  <mssgle:LineSegment
+                    End="10.785713234726,33.147057107576" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Aqui se trae de una tabla los parametros "
+          ParentId="Package"
+          Size="230,60"
+          Id="ebb0535e-c276-4b89-8455-a9001f5c9e96"
+          TopLeft="508,33">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Color="#FFF1F1F1">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1769,7 +2207,7 @@
     design-time-name="Package\Foreach Loop Container\Tarea exportar datos OrderDetail">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="190,42"
           Id="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Origen de archivo plano"
@@ -1807,7 +2245,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1841,7 +2281,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1849,6 +2291,57 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach Loop Container\Tarea exportar datos OrderDetail\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos\Origen de OLE DB"
+          TopLeft="404,93" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Tarea Flujo de datos\Componente de script"
+          TopLeft="401,193" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="489,135">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
